@@ -45,7 +45,8 @@ questions.
             deprecation="true"
             debug="true"
             encoding="UTF-8"
-            failonerror="true">
+            failonerror="true"
+            target="1.7">
             <src>
                 <dirset dir="${ant.project.name}">
                     <include name="${folder.src}"/>

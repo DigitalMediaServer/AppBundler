@@ -4,6 +4,7 @@ appbundler
 A fork of [infinitekind.com appbundler](https://bitbucket.org/infinitekind/appbundler) which again is a fork of  the [Java Application Bundler](https://svn.java.net/svn/appbundler~svn) 
 with the following changes:
 
+- Compiles for Java 7 even if a later JDK is used (`target="1.7"`)
 - The native binary is created as universal (32/64)
 - Fixes [icon not showing bug](http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=7159381) in `JavaAppLauncher`
 - Adds `LC_CTYPE` environment variable to the `Info.plist` file in order to fix an [issue with `File.exists()` in OpenJDK 7](http://java.net/jira/browse/MACOSX_PORT-165)  **(Contributed by Steve Hannah)**
@@ -57,7 +58,7 @@ Example 1:
 
     <target name="bundle">
       <taskdef name="bundleapp" 
-        classpath="appbundler-1.0ea.jar"
+        classpath="appbundler-x.x.jar"
         classname="com.oracle.appbundler.AppBundlerTask"/>
 
       <bundleapp 
@@ -138,7 +139,7 @@ Example 2, use installed Java but require Java 8 (or later):
 
     <target name="bundle">
       <taskdef name="bundleapp" 
-        classpath="appbundler-1.0ea.jar"
+        classpath="appbundler-x.x.jar"
         classname="com.oracle.appbundler.AppBundlerTask"/>
       <bundleapp 
           jvmrequired="1.8"
@@ -161,7 +162,7 @@ Example 2, use installed Java but require Java 8 (or later) JRE and not a JDK:
 
     <target name="bundle">
       <taskdef name="bundleapp" 
-        classpath="appbundler-1.0ea.jar"
+        classpath="appbundler-x.x.jar"
         classname="com.oracle.appbundler.AppBundlerTask"/>
       <bundleapp 
           jvmrequired="1.8"
