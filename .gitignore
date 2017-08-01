@@ -1,0 +1,4 @@
+/appbundler/bin
+*.classpath
+*.project
+SwingInterop.jar
