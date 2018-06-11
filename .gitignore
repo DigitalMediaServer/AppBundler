@@ -1,4 +1,5 @@
 /appbundler/bin
+*.DS_Store
 *.classpath
 *.project
 SwingInterop.jar

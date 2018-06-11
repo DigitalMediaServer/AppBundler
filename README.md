@@ -1,4 +1,4 @@
-appbundler
+AppBundler
 =============
 
 A fork of [infinitekind.com appbundler](https://bitbucket.org/infinitekind/appbundler) which again is a fork of  the [Java Application Bundler](https://svn.java.net/svn/appbundler~svn) 
