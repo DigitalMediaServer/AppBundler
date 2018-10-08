@@ -64,6 +64,7 @@ Example 1:
         classname="com.oracle.appbundler.AppBundlerTask"/>
 
       <bundleapp 
+          debug="true"
           classpathref="runclasspathref"
           outputdirectory="${dist}"
           name="${bundle.name}"
@@ -122,6 +123,9 @@ Example 1:
           <!-- Define custom key-value pairs in Info.plist -->
           <plistentry key="ABCCustomKey" value="foobar"/>
           <plistentry key="ABCCustomBoolean" value="true" type="boolean"/>
+          
+          <!-- Define environment key-string pairs in LSEnvironment dictionary -->
+          <environment name="MinimumSystemVersion" value="10.6.0"/>
 
           <!-- Workaround as com.apple.mrj.application.apple.menu.about.name property may no longer work -->
           <option value="-Xdock:name=${bundle.name}"/>
@@ -177,6 +181,7 @@ Example 2, use installed Java but require Java 8 (or later) JRE and not a JDK:
           identifier="com.company.product"
           shortversion="${version.public}"
           version="${version.internal}"
+          minimumSystemVersion="10.6.0"
           icon="${icons.path}/${bundle.icns}"
           mainclassname="Main"
           copyright="2012 Your Company"
