@@ -122,6 +122,9 @@ Example 1:
           <!-- Define custom key-value pairs in Info.plist -->
           <plistentry key="ABCCustomKey" value="foobar"/>
           <plistentry key="ABCCustomBoolean" value="true" type="boolean"/>
+          
+          <!-- Define environment key-string in LSEnvironment dictionary -->
+          <environment name="MinimumSystemVersion" value="10.6.0"/>
 
           <!-- Workaround as com.apple.mrj.application.apple.menu.about.name property may no longer work -->
           <option value="-Xdock:name=${bundle.name}"/>
